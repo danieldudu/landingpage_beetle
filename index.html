@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Animated Menu & Landing Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            crossorigin="anonymous"
+        />
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <!-- Hamburger 7 Overlay Menu -->
+        
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+            >
+            <div class="overlay-content">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Cars</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Normal Menu -->
+        
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">About</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Main Content -->
+
+        <section>
+            <div class="container">
+                <h1>Legendary Beetle</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit laboriosam illum deserunt! Totam repellat iste quaerat ratione, officia reprehenderit enim laboriosam et libero necessitatibus aliquam rem repudiandae delectus quo. Amet!</p>
+                <button class="btn">Read More</button>
+                <img class="img" src="/img/beetle1.png" alt="car">
+            </div>
+            <span
+                <a href="javascript:void(0)" class="hamburger"
+                style="font-size:30px;cursor:pointer;"
+                onclick="openNav()"
+                >&#9776;</a></span
+            >
+        </section>
+
+        <footer id="main-footer">
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </footer>
+
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+        <!-- <div id="navigationwrap">
+            <div class="container menu">
+                <nav>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">CARS</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">SHOWROOM</a></li>
+                        <li><a href="">NEWS</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+        <script>
+            var navigation = new TimeLineLite({ paused: true, reversed: true });
+
+            navigation
+                .to("#navigationwrap", 0.5, { opacity: 1, display: "block" })
+                .to(".navbar", 0.3, { opacity: 0 }, "-=0.1")
+                .to(".close", 0.3, { display: "block", opacity: 1 }, "-=0.1")
+                .from(".menu", 0.5, { opacity: 0, y: 30 })
+                .from(".social", 0.5, { opacity: 0 });
+
+            $(".navbar, .close").click(function() {
+                navigation.reversed()
+                    ? navigation.play()
+                    : navigation.reverse();
+            });
+        </script> -->
+    </body>
+</html>
